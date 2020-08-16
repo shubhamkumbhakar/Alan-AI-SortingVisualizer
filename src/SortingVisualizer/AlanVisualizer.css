@@ -1,15 +1,14 @@
 .array-container {
-    padding-bottom: 0%;
-    position: absolute;
-    left: 85px;
+    margin: auto;
+    width: 90%;
     border: 2px solid rgb(0, 0, 0);
     margin-top: 30px;
     /* top: 100px; */
   }
   
   .array-bar {
-    width: 20px;
+    width: 15px;
     display: inline-block;
-    border: 1px solid red;
+    border: 1px solid black;
     
   }

@@ -5,8 +5,8 @@ import alanBtn from '@alan-ai/alan-sdk-web'
 
 //let vw = document.documentElement.clientWidth;
 const ANIMATION_SPEED_MS = 4;
-let NUMBER_OF_ARRAY_BARS = 55;
-const PRIMARY_COLOR = 'rgb(187, 141, 14)';
+
+const PRIMARY_COLOR = 'lightblue';
 const SECONDARY_COLOR = 'blue';
 
 
@@ -43,6 +43,8 @@ class AlanVisualizer extends Component{
 
     resetArray() {
         const array = [];
+        let NUMBER_OF_ARRAY_BARS = Math.floor((document.documentElement.clientWidth)/25);
+        //console.log(NUMBER_OF_ARRAY_BARS);
         for (let i = 0; i < NUMBER_OF_ARRAY_BARS; i++) {
           array.push(randomIntFromInterval(5, 500));
         }
@@ -75,18 +77,18 @@ class AlanVisualizer extends Component{
 
       }
     
-      testSortingAlgorithms() {
-        for (let i = 0; i < 100; i++) {
-          const array = [];
-          const length = randomIntFromInterval(1, 100);
-          for (let i = 0; i < length; i++) {
-            array.push(randomIntFromInterval(-100, 100));
-          }
-          const javaScriptSortedArray = array.slice().sort((a, b) => a - b);
-          const mergeSortedArray = getMergeSortAnimations(array.slice());
-          console.log(arraysAreEqual(javaScriptSortedArray, mergeSortedArray));
-        }
-      }
+      // testSortingAlgorithms() {
+      //   for (let i = 0; i < 100; i++) {
+      //     const array = [];
+      //     const length = randomIntFromInterval(1, 100);
+      //     for (let i = 0; i < length; i++) {
+      //       array.push(randomIntFromInterval(-100, 100));
+      //     }
+      //     const javaScriptSortedArray = array.slice().sort((a, b) => a - b);
+      //     const mergeSortedArray = getMergeSortAnimations(array.slice());
+      //     console.log(arraysAreEqual(javaScriptSortedArray, mergeSortedArray));
+      //   }
+      // }
 
 
 
@@ -127,14 +129,14 @@ function randomIntFromInterval(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
   
-function arraysAreEqual(arrayOne, arrayTwo) {
-    if (arrayOne.length !== arrayTwo.length) return false;
-    for (let i = 0; i < arrayOne.length; i++) {
-      if (arrayOne[i] !== arrayTwo[i]) {
-        return false;
-      }
-    }
-    return true;
-}
+// function arraysAreEqual(arrayOne, arrayTwo) {
+//     if (arrayOne.length !== arrayTwo.length) return false;
+//     for (let i = 0; i < arrayOne.length; i++) {
+//       if (arrayOne[i] !== arrayTwo[i]) {
+//         return false;
+//       }
+//     }
+//     return true;
+// }
 
 export default AlanVisualizer
