@@ -1,10 +1,29 @@
-export function getMergeSortAnimations(array) {
-    const animations = [];
-    if (array.length <= 1) return array;
-    const auxiliaryArray = array.slice();
-    mergeSortHelper(array, 0, array.length - 1, auxiliaryArray, animations);
-    return animations;
+export function getSelectionSortAnimations(array){
+  const animations = [];
+  if(array.length<=1) return array;
+  for(let i=0;i<array.length-1;i++){
+    let iMin = i;
+    for(let j=i+1;i<array.length;j++){
+      animations.push([i,j])
+      animations.push([i,j])
+      if(array[j]<array[iMin]){
+         animations.push([i,j,array[j],array[i]])
+          iMin=j; 
+      }
+      else
+      animations.push([i,j,array[i],array[j]])
+    }
+    array[i]= array[i]+array[iMin]
+    array[iMin]=array[i]-array[iMin]
+    array[i]=array[i]-array[iMin]
   }
+  return animations;
+
+}
+
+
+
+
 
 export function getBubbleSortAnimations(array){
   const animations =[];
@@ -13,22 +32,31 @@ export function getBubbleSortAnimations(array){
   for(let i=0;i<array.length-1-j;i++){
     animations.push([i,i+1])
     animations.push([i,i+1])
-    if(array[i]<array[i+1]){
-      animations.push([i,array[i]])
+    if(array[i]<=array[i+1]){
+      animations.push([i,i+1,array[i],array[i+1]])
       
     }
     else{
+      animations.push([i,i+1,array[i+1],array[i]])
       
-      let temp = array[i]
-      array[i]=array[i+1]
-      array[i+1]=temp
-      animations.push([i,array[i]])
-      // array[i]= array[i]+array[i+1]
-      // array[i+1]=array[i]-array[i+1]
-      // array[i]=array[i]-array[i+1]
+      array[i]= array[i]+array[i+1]
+      array[i+1]=array[i]-array[i+1]
+      array[i]=array[i]-array[i+1]
     }
    }   
   }
+  return animations;
+}
+
+
+
+
+
+export function getMergeSortAnimations(array) {
+  const animations = [];
+  if (array.length <= 1) return array;
+  const auxiliaryArray = array.slice();
+  mergeSortHelper(array, 0, array.length - 1, auxiliaryArray, animations);
   return animations;
 }
   
