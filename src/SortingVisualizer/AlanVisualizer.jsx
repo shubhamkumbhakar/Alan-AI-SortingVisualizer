@@ -1,11 +1,11 @@
 import React, {Component} from 'react'
-import {getBubbleSortAnimations, getMergeSortAnimations} from '../sortingAlgorithms/sortingAlgorithms.js';
+import {getSelectionSortAnimations, getBubbleSortAnimations, getMergeSortAnimations} from '../sortingAlgorithms/sortingAlgorithms.js';
 import './AlanVisualizer.css';
 import alanBtn from '@alan-ai/alan-sdk-web'
 
 //let vw = document.documentElement.clientWidth;
 let ANIMATION_SPEED_MS = 4;
-//const JUDGE_COLOR = 'lightgreen';
+//const JUDGE_COLOR = 'lightgreen';ggit
 const PRIMARY_COLOR = 'lightblue';
 const SECONDARY_COLOR = 'blue';
 //const abc = 'green';
@@ -85,11 +85,11 @@ class AlanVisualizer extends Component{
       }
 
 
-    // selectionSort() {
-    //   const ssanimations = getSelectionSortAnimations(this.state.array);
-    //   //alert('ssanimations')
-    //   this.animate(ssanimations);
-    // }
+    selectionSort() {
+      const ssanimations = getSelectionSortAnimations(this.state.array);
+      console.log(ssanimations);
+      this.animate(ssanimations);
+    }
 
 
 
@@ -204,7 +204,7 @@ class AlanVisualizer extends Component{
         </select>
        
         <button onClick={() => this.resetArray()}>Generate New Array</button>
-        {/* <button onClick={() => this.selectionSort()}>Selection Sort</button> */}
+        <button onClick={() => this.selectionSort()}>Selection Sort</button>
         <button onClick={() => this.bubbleSort()}>Bubble Sort</button>
         <button onClick={() => this.mergeSort()}>Merge Sort</button>
          

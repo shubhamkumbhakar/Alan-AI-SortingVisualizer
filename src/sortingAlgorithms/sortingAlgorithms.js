@@ -1,22 +1,24 @@
 export function getSelectionSortAnimations(array){
   const animations = [];
-  if(array.length<=1) return array;
-  for(let i=0;i<array.length-1;i++){
-    let iMin = i;
-    for(let j=i+1;i<array.length;j++){
-      animations.push([i,j])
-      animations.push([i,j])
-      if(array[j]<array[iMin]){
-         animations.push([i,j,array[j],array[i]])
-          iMin=j; 
-      }
-      else
-      animations.push([i,j,array[i],array[j]])
+  if(array.length<=1) return array; 
+  for (let i = 0; i < array.length-1; i++)  
+    {  
+        let min_idx = i;  
+        for (let j = i+1; j < array.length; j++) { 
+        animations.push([i,j])
+        animations.push([i,j])
+        if (array[j] < array[min_idx]){  
+            animations.push([i,j,array[j],array[min_idx]])
+            min_idx = j;  
+          }
+        else{
+            animations.push([i,j,array[min_idx],array[j]])
+          }
+        }
+        let temp = array[i];
+        array[i] = array[min_idx];
+        array[min_idx] = temp;
     }
-    array[i]= array[i]+array[iMin]
-    array[iMin]=array[i]-array[iMin]
-    array[i]=array[i]-array[iMin]
-  }
   return animations;
 
 }
