@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/Alan-AI-SortingVisualizer/static/css/main.9138c4cc.chunk.css",
-    "main.js": "/Alan-AI-SortingVisualizer/static/js/main.d91515bb.chunk.js",
-    "main.js.map": "/Alan-AI-SortingVisualizer/static/js/main.d91515bb.chunk.js.map",
+    "main.css": "/Alan-AI-SortingVisualizer/static/css/main.3dd22ffa.chunk.css",
+    "main.js": "/Alan-AI-SortingVisualizer/static/js/main.7eca919d.chunk.js",
+    "main.js.map": "/Alan-AI-SortingVisualizer/static/js/main.7eca919d.chunk.js.map",
     "runtime-main.js": "/Alan-AI-SortingVisualizer/static/js/runtime-main.2bce8582.js",
     "runtime-main.js.map": "/Alan-AI-SortingVisualizer/static/js/runtime-main.2bce8582.js.map",
     "static/js/2.e0050218.chunk.js": "/Alan-AI-SortingVisualizer/static/js/2.e0050218.chunk.js",
     "static/js/2.e0050218.chunk.js.map": "/Alan-AI-SortingVisualizer/static/js/2.e0050218.chunk.js.map",
     "index.html": "/Alan-AI-SortingVisualizer/index.html",
-    "precache-manifest.1a62d9891cea693912cd120eb13f08d4.js": "/Alan-AI-SortingVisualizer/precache-manifest.1a62d9891cea693912cd120eb13f08d4.js",
+    "precache-manifest.2af186ebd5410ee8af0dcfd34e6d6fd7.js": "/Alan-AI-SortingVisualizer/precache-manifest.2af186ebd5410ee8af0dcfd34e6d6fd7.js",
     "service-worker.js": "/Alan-AI-SortingVisualizer/service-worker.js",
-    "static/css/main.9138c4cc.chunk.css.map": "/Alan-AI-SortingVisualizer/static/css/main.9138c4cc.chunk.css.map",
+    "static/css/main.3dd22ffa.chunk.css.map": "/Alan-AI-SortingVisualizer/static/css/main.3dd22ffa.chunk.css.map",
     "static/js/2.e0050218.chunk.js.LICENSE.txt": "/Alan-AI-SortingVisualizer/static/js/2.e0050218.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.2bce8582.js",
     "static/js/2.e0050218.chunk.js",
-    "static/css/main.9138c4cc.chunk.css",
-    "static/js/main.d91515bb.chunk.js"
+    "static/css/main.3dd22ffa.chunk.css",
+    "static/js/main.7eca919d.chunk.js"
   ]
 }
