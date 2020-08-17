@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6f28d4f40514caa241992ba789ec6a00",
+    "revision": "c1d9dc00434f7aac972cf2a7f881dcac",
     "url": "/Alan-AI-SortingVisualizer/index.html"
   },
   {
-    "revision": "8531edcc9712404b4283",
+    "revision": "018bac3ef4762fa4eaa0",
     "url": "/Alan-AI-SortingVisualizer/static/css/main.3dd22ffa.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Alan-AI-SortingVisualizer/static/js/2.e0050218.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8531edcc9712404b4283",
-    "url": "/Alan-AI-SortingVisualizer/static/js/main.b1fb1307.chunk.js"
+    "revision": "018bac3ef4762fa4eaa0",
+    "url": "/Alan-AI-SortingVisualizer/static/js/main.f2dae3af.chunk.js"
   },
   {
     "revision": "b314ca231d122c81f373",
