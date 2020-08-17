@@ -1,4 +1,7 @@
 .array-container {
+    background-color: black;
+    height: 421px;
+    padding-top: 10px;
     margin: auto;
     width: 90%;
     border: 2px solid rgb(0, 0, 0);
@@ -10,5 +13,6 @@
     width: 15px;
     display: inline-block;
     border: 1px solid black;
+
     
   }

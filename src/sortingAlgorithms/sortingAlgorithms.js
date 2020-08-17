@@ -5,6 +5,32 @@ export function getMergeSortAnimations(array) {
     mergeSortHelper(array, 0, array.length - 1, auxiliaryArray, animations);
     return animations;
   }
+
+export function getBubbleSortAnimations(array){
+  const animations =[];
+  if(array.length <=1) return array;
+  for(let j=0;j<array.length-1;j++){
+  for(let i=0;i<array.length-1-j;i++){
+    animations.push([i,i+1])
+    animations.push([i,i+1])
+    if(array[i]<array[i+1]){
+      animations.push([i,array[i]])
+      
+    }
+    else{
+      
+      let temp = array[i]
+      array[i]=array[i+1]
+      array[i+1]=temp
+      animations.push([i,array[i]])
+      // array[i]= array[i]+array[i+1]
+      // array[i+1]=array[i]-array[i+1]
+      // array[i]=array[i]-array[i+1]
+    }
+   }   
+  }
+  return animations;
+}
   
   function mergeSortHelper(
     mainArray,

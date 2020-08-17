@@ -1,13 +1,14 @@
 import React, {Component} from 'react'
-import {getMergeSortAnimations} from '../sortingAlgorithms/sortingAlgorithms.js';
+import {getBubbleSortAnimations, getMergeSortAnimations} from '../sortingAlgorithms/sortingAlgorithms.js';
 import './AlanVisualizer.css';
 import alanBtn from '@alan-ai/alan-sdk-web'
 
 //let vw = document.documentElement.clientWidth;
-const ANIMATION_SPEED_MS = 4;
+const ANIMATION_SPEED_MS = 10;
 
 const PRIMARY_COLOR = 'lightblue';
 const SECONDARY_COLOR = 'blue';
+//const abc = 'green';
 
 
 const alanKey = '9f9f72618c488deabcd416fd731d39162e956eca572e1d8b807a3e2338fdd0dc/stage';
@@ -43,17 +44,43 @@ class AlanVisualizer extends Component{
 
     resetArray() {
         const array = [];
-        let NUMBER_OF_ARRAY_BARS = Math.floor((document.documentElement.clientWidth)/25);
+        let NUMBER_OF_ARRAY_BARS = Math.floor((document.documentElement.clientWidth)/24)+2;
         //console.log(NUMBER_OF_ARRAY_BARS);
         for (let i = 0; i < NUMBER_OF_ARRAY_BARS; i++) {
-          array.push(randomIntFromInterval(5, 500));
+          array.push(randomIntFromInterval(5, 400));
         }
         this.setState({array});
       }
 
+    bubbleSort() {
+         const animations = getBubbleSortAnimations(this.state.array);
+         console.log(animations)
+         for( let i=0; i<animations.length;i++){
+          const arrayBars = document.getElementsByClassName('array-bar');
+          const isColorChange = i % 3 !== 2;
+          if (isColorChange) {
+            const [barOneIdx, barTwoIdx] = animations[i];
+            const barOneStyle = arrayBars[barOneIdx].style;
+            const barTwoStyle = arrayBars[barTwoIdx].style;
+            const color = i % 3 === 0 ? SECONDARY_COLOR : PRIMARY_COLOR;
+            setTimeout(() => {
+              barOneStyle.backgroundColor = color;
+              barTwoStyle.backgroundColor = color;
+            }, i * ANIMATION_SPEED_MS);
+          } else {
+            setTimeout(() => {
+              const [barOneIdx, newHeight] = animations[i];
+              const barOneStyle = arrayBars[barOneIdx].style;
+              barOneStyle.height = `${newHeight}px`;
+            }, i * ANIMATION_SPEED_MS);
+          }
+         }
+    }
+
 
     mergeSort() {
         const animations = getMergeSortAnimations(this.state.array);
+        console.log(animations)
         for (let i = 0; i < animations.length; i++) {
           const arrayBars = document.getElementsByClassName('array-bar');
           const isColorChange = i % 3 !== 2;
@@ -108,12 +135,17 @@ class AlanVisualizer extends Component{
               height: `${value}px`,
             }}></div>
         ))}
+        <div className="array-bar" style={{
+              backgroundColor: PRIMARY_COLOR,
+              height: `403px`,
+            }}></div>
         </div>
         <div>
         <button onClick={() => this.resetArray()}>Generate New Array</button>
+        <button onClick={() => this.bubbleSort()}>Bubble Sort</button>
         <button onClick={() => this.mergeSort()}>Merge Sort</button>
-        {/* <button onClick={() => this.quickSort()}>Quick Sort</button>
-        <button onClick={() => this.heapSort()}>Heap Sort</button>
+         
+        {/*<button onClick={() => this.heapSort()}>Heap Sort</button>
         <button onClick={() => this.bubbleSort()}>Bubble Sort</button>
         <button onClick={() => this.testSortingAlgorithms()}>
           Test Sorting Algorithms (BROKEN)
