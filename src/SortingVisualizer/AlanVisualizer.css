@@ -1,6 +1,7 @@
+
 .array-container {
     background-color: black;
-    height: 421px;
+    height: 361px;
     padding-top: 10px;
     margin: auto;
     width: 90%;
@@ -12,7 +13,44 @@
   .array-bar {
     width: 15px;
     display: inline-block;
-    border: 1px solid black;
+    border: 1px solid black; 
+  }
 
+  .btn1 {
+    background-color: #a4bdda; /* Green */
+    border: 2px solid rgb(99, 34, 99);
+    color: black;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
+  #gbtn:hover{
+    background-color: rgb(130, 146, 219);
+    color: white;
+  }
+  .btn1:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  #aspeed{
     
+    height: 2.8em;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #b1abe9;
+    background-color: #a4bdda;
+    margin: 15px;
+    outline: none;
+  }
+  p{
+    padding: 15px;
+    font-size: 12px;
   }

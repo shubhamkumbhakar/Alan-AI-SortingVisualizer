@@ -51,7 +51,25 @@ export function getBubbleSortAnimations(array){
 }
 
 
+export function getInsertionSortAnimations(array){
+    const animations = [];
+    for(let i=1;i<array.length;i++){
+      let value = array[i];
+      let hole = i;
+      while(hole>0 && array[hole-1]>value){
+        animations.push([hole,hole-1])
+        animations.push([hole,hole-1])
+          animations.push([hole-1,hole,array[hole],array[hole-1]])
+          let temp= array[hole]
+          array[hole]=array[hole-1];
+          array[hole-1]=temp
+        hole--;
+      }
+      array[hole]=value;
+    }
+    return animations;
 
+}
 
 
 export function getMergeSortAnimations(array) {
