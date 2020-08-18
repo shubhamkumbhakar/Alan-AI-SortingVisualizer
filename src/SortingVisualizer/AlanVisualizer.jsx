@@ -196,7 +196,7 @@ class AlanVisualizer extends Component{
         
         </div>
         <br/>
-        <p><b>Help: </b>After tapping the mic button, Say Hi to Alan or Speak up the text witten on the buttons.</p>
+        <p><b>Help: </b>After tapping the mic button, Say Hi to Alan and Speak up the text witten on the buttons.</p>
         {/*<button onClick={() => this.heapSort()}>Heap Sort</button>
         <button onClick={() => this.bubbleSort()}>Bubble Sort</button>
         <button onClick={() => this.testSortingAlgorithms()}>

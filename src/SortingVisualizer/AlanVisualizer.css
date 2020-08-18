@@ -18,7 +18,7 @@
 
   .btn1 {
     background-color: #a4bdda; /* Green */
-    border: 2px solid rgb(99, 34, 99);
+    border: 2px solid #958dd8;
     color: black;
     padding: 8px 16px;
     border-radius: 5px;
@@ -36,7 +36,7 @@
     color: white;
   }
   .btn1:hover {
-    background-color: #4CAF50;
+    background-color: #2d206b;
     color: white;
   }
 
@@ -45,7 +45,7 @@
     height: 2.8em;
     padding: 10px;
     border-radius: 5px;
-    border: 2px solid #b1abe9;
+    border: 2px solid #958dd8;
     background-color: #a4bdda;
     margin: 15px;
     outline: none;
