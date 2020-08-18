@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Alan-AI-SortingVisualizer/precache-manifest.a9b4fdbc15c8432c8dac34f62dc06fef.js"
+  "/Alan-AI-SortingVisualizer/precache-manifest.3f53ef2f8c5b3a0f4f1019e86e3da68a.js"
 );
 
 self.addEventListener('message', (event) => {
